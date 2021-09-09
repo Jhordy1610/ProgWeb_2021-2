@@ -1,0 +1,10 @@
+
+header > hgroup {
+    background-image: url("../img/avengers.jpg");
+    background-repeat: no-repeat;
+    /*background-repeat: repeat-x;*/ /*repite horizontalmente*/
+    /*background-position: center center;*/ /*primer center para el eje 'x', el segundo para el 'y'*/
+    background-attachment: scroll; /*para que se quede fija la imagen*/
+    overflow: hidden;
+}
+

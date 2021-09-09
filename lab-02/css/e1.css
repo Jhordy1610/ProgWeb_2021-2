@@ -1,0 +1,24 @@
+/*
+z-index
+*/
+
+.alfondo {
+    position: relative; /*respecto al eje de la ventana del navegador*/
+    top:  0px;
+    left: 0px;
+    z-index: 2; /*el z-index mayor aparece adelante siempre*/
+}
+
+.almedio {
+    position: relative; /*relative: una después de otra, sin saltos de línea, al ladito nomás*/
+    top: 25px;
+    left: 100px;
+    z-index: 3;
+}
+
+.adelante {
+    position: relative;
+    top: 50px;
+    left: 150px;
+    z-index: 1;
+}
