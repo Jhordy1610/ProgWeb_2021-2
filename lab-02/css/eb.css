@@ -1,0 +1,99 @@
+
+#cabeceraprincipal {
+    background-image: url("../img/logo1.png"), url("../img/avengers.jpg");
+    background-position: top left, 100% center;
+    background-repeat: no-repeat, repeat;
+    background-origin: border-box, content-box; /*para colocar la imagen basado en el modelo de cajas*/
+    color: white;
+    height: max-content;
+}
+
+/*
+Sombras de texto
+*/
+h1 {
+    text-shadow: -5px 4px 6px gray; /*tamaño, cuanto se extiende, color*/
+    font-size: 400%;
+}
+
+/*
+Redondear bordes
+*/
+header {
+    border: 3px solid red;
+    border-radius: 15px;
+    padding: 5px 20px;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: orange;
+}
+
+nav {
+    border: 3px solid yellow;
+    border-radius: 50px;
+    background-color: rgba(150,200,230,0.5); /*el 0.5 es el contraste*/
+    background-color: hsla(58,90%,80%,0.93); /*el 58 está en grados, el 80% es la luminosidad, el 0.93 es como el contraste*/
+}
+
+footer {
+    background-color: rgb(100, 50, 200);
+    color: white;
+    text-align: center;
+}
+
+/*
+Colores
+workwithcolor
+*/
+
+/*
+Sombra a la imagen
+*/
+img {
+    box-shadow: 25px 25px 10px darkgray; /*sombra a la imagen*/
+}
+
+/*
+Animación
+*/
+img {
+    position: relative;
+    animation: movimiento linear 10s 2 1s;
+}
+
+@keyframes movimiento {
+    0% {opacity: 0; left: 50px; top:0px; }
+    25% {opacity: 1; left: 0px; top:50px; }
+    50% {opacity: 0; left: 50px; top:100px; }
+    75% {opacity: 1; left: 100px; top:50px; }
+    100% {opacity: 0; left: 50px; top:0px; }
+
+}
+
+/*
+Zona de navegación horizontal
+*/
+nav ul {
+    list-style: none; /*quitamos la viñeta*/
+    padding: 1px;
+    display: block;
+    clear: right;
+    background-color: yellow;
+    height: 24px;
+}
+
+nav ul li {
+    display: inline; /*cada li a la derecha del otro, si se llena el block, continúa abajo*/
+}
+
+nav ul li a {
+    text-decoration: none;  /*quitamos el subrayado*/
+}
+
+nav ul li a:hover { /*al pasar el mouse sobre los links*/
+
+    text-decoration: underline;
+    color: red
+}
+

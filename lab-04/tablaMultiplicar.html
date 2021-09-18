@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>...::Lab 04::...</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mi primer lab del curso" />
+    <meta name="keywords" content="programacion, web, html, ulima" />
+    <link rel="icon" href="logo1.ico" type="image/vnd.microsoft.icon" size="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/lab04.css" type="text/css" />
+
+    <script>
+
+        function generateTable()
+        {
+                digit = 12;
+                var html = "";
+                for(var i = 1; i <= digit; i++) 
+                {
+                    html += "<tr>";
+                    for(var j = 1; j <= 12; j++)
+                    {
+                        html += "<td>" + i*j + "</td>";
+                    }
+                    html += "</tr>";
+                }
+            
+                document.getElementById('result').innerHTML = html;
+                document.getElementById('result').setAttribute('class', 'alert-warning');
+            
+        }
+    </script>
+
+</head>
+
+<body>
+    
+        <div>
+            <button onclick="generateTable()">Tabla de multiplicar, retito</button>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="10"><center>Tabla de multiplicar</center></th>
+                    </tr>
+                </thead>
+                 <tbody id="result"></tbody>
+            </table>
+        </div>
+     
+</body>
+
+</html>
