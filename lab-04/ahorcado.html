@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>...::Lab 04::...</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mi primer lab del curso" />
+    <meta name="keywords" content="programacion, web, html, ulima" />
+    <link rel="icon" href="logo1.ico" type="image/vnd.microsoft.icon" size="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/lab04.css" type="text/css" />
+
+    <script>
+        var lista = ["curso", "programacion", "web"]
+        var num;
+        var ok = 0;
+
+            while (ok == 0) {
+                num = window.prompt("Ingresa un numero (0, 1 o 2)");
+
+                if (num > 2) {
+                    window.alert("El numero debe estar entre 0 y 2")
+                } else {
+                    ok = 1
+                }
+            }
+
+        var i=0;
+        var correctas = 0;
+        var incorrectas = 0;
+        var palabra = lista[num]
+
+        while (i <= 3)
+        {
+            letra = window.prompt("Ingresa una letra");
+            for (indice in palabra) 
+            { 
+                if (letra == palabra[indice])
+                {
+                    document.writeln("<span class='correcto'>" + letra + "</span>")
+                    correctas += 1;
+                    break;
+                }
+                else
+                {
+                    document.writeln("<span class='incorrecto'>" + letra + "</span>")
+                    incorrectas += 1;
+                    break;
+                }
+            } 
+            i++;
+        }
+
+        if (correctas > incorrectas)
+        {
+            document.writeln("<span> GANASTE </span>")  
+        }
+        else 
+        {
+            document.writeln("<span> GAME OVER </span>") 
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
